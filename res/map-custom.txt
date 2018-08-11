@@ -1,0 +1,43 @@
+# You should put your custom graph data in here.
+ 
+IMAGE
+map-custom.jpg
+600
+315
+ 
+VERTICES
+King's Landing;319;298
+Braavos;522;108;
+Riverrun;203;209
+Lannisport;92;280
+Pyke;98;174
+Moat Cailin;240;25
+The Eyrie;331;168
+White Harbor;281;8
+Pentos;525;305
+The Twins;212;118
+Dragonstone;399;261
+Harrenhal;273;228
+ 
+ 
+EDGES
+Braavos; Pentos; 200
+Dragonstone; Braavos; 50
+Dragonstone; King's Landing; 25
+Pentos; Dragonstone; 75
+The Eyrie; Braavos; 150
+The Eyrie; King's Landing; 35
+King's Landing; Lannisport; 175
+Lannisport; Pyke; 20
+The Twins; Pyke; 40
+Moat Cailin; White Harbor; 150
+Moat Cailin; Braavos; 350
+Moat Cailin; The Eyrie; 50
+Moat Cailin; The Twins; 40
+The Eyrie; Harrenhal; 25
+Riverrun; Moat Cailin; 70
+Riverrun; Harrenhal; 30
+Moat Cailin; Harrenhal; 300
+The Twins; Harrenhal; 15
+Lannisport; Riverrun; 25
+Lannisport; Harrenhal; 60
