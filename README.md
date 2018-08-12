@@ -1,1 +1,3 @@
-# trailblazer
+# Trailblazer
+
+Stanford CS106B assignemnt
