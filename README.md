@@ -5,7 +5,7 @@ Stanford CS106B assignment (Fall, 2016). As per the assignment guide (https://we
 This assignment focuses on graphs, specifically on searching for paths in a graph. You will write several path finding algorithms.
 We provide you with several support files, but you should not modify them. Turn in the following files;
 
-- trailblazer.cpp , code to perform graph path searches
+- [trailblazer.cpp](https://github.com/tpawelski/trailblazer/blob/master/src/trailblazer.cpp) , code to perform graph path searches
 
 - map-custom.txt, a world map of your own creation.
 
