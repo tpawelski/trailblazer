@@ -5,11 +5,11 @@ Stanford CS106B assignment (Fall, 2016). As per the assignment guide (https://we
 This assignment focuses on graphs, specifically on searching for paths in a graph. You will write several path finding algorithms.
 We provide you with several support files, but you should not modify them. Turn in the following files;
 
--trailblazer.cpp , code to perform graph path searches
+- trailblazer.cpp , code to perform graph path searches
 
--map-custom.txt, a world map of your own creation.
+- map-custom.txt, a world map of your own creation.
 
--map-custon.jpg, a world map of your own creation.
+- map-custon.jpg, a world map of your own creation.
 
 
 ## Overview
@@ -17,13 +17,13 @@ This program displays various road maps and allows users to find the shortest pa
 
 If you click on any two nodes in the world, the program will find a path from the starting position to the ending position. As it does so, it will color the vertexes green and yellow based on the colors assigned to them by the algorithm. Once the path is found, the program will highlight it and display information about the path cost in the console. The user can select one of four path-searching algorithms in the top menu:
 
--Breadth-first search (BFS)
+- Breadth-first search (BFS)
 
--Dijkstra's algorithm
+- Dijkstra's algorithm
 
--A* search
+- A* search
 
--Alternative Route
+- Alternative Route
 
 The window contains several controls. You can load world maps by selecting them from the bottom drop-down menu and then clicking the "Load" button.
 
