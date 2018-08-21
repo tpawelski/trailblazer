@@ -18,8 +18,11 @@ This program displays various road maps and allows users to find the shortest pa
 If you click on any two nodes in the world, the program will find a path from the starting position to the ending position. As it does so, it will color the vertexes green and yellow based on the colors assigned to them by the algorithm. Once the path is found, the program will highlight it and display information about the path cost in the console. The user can select one of four path-searching algorithms in the top menu:
 
 -Breadth-first search (BFS)
+
 -Dijkstra's algorithm
+
 -A* search
+
 -Alternative Route
 
 The window contains several controls. You can load world maps by selecting them from the bottom drop-down menu and then clicking the "Load" button.
