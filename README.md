@@ -9,7 +9,7 @@ We provide you with several support files, but you should not modify them. Turn 
 
 - [map-custom.txt](https://github.com/tpawelski/trailblazer/blob/master/res/map-custom.txt), a world map of your own creation. 
 
-- [map-custon.jpg](https://github.com/tpawelski/trailblazer/blob/master/res/map-custom.jpg), a world map of your own creation. (Game of Thrones Map!)
+- [map-custon.jpg](https://github.com/tpawelski/trailblazer/blob/master/res/map-custom.jpg), a world map of your own creation. (Westeros!)
 
 
 ## Overview
