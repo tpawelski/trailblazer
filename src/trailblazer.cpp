@@ -1,7 +1,7 @@
 
 // CS106B Trailblazer assignment 12/8/16
 // Author: Tommy Pawelski
-// Note: we took our custom picture of Westeros from https://jseo.com/case-studies/game-of-thrones-westeros-hits-google-maps/
+// Note: picture of Westeros was taken from https://jseo.com/case-studies/game-of-thrones-westeros-hits-google-maps/
 // Citations: Lecture slides and tutorial hours
 
 #include "trailblazer.h"
