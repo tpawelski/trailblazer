@@ -7,9 +7,9 @@ We provide you with several support files, but you should not modify them. Turn 
 
 - [trailblazer.cpp](https://github.com/tpawelski/trailblazer/blob/master/src/trailblazer.cpp) , code to perform graph path searches
 
-- map-custom.txt, a world map of your own creation.
+- [map-custom.txt](https://github.com/tpawelski/trailblazer/blob/master/res/map-custom.txt), a world map of your own creation. 
 
-- map-custon.jpg, a world map of your own creation.
+- [map-custon.jpg](https://github.com/tpawelski/trailblazer/blob/master/res/map-custom.jpg), a world map of your own creation. (Game of Thrones Map!)
 
 
 ## Overview
