@@ -6,7 +6,9 @@ This assignment focuses on graphs, specifically on searching for paths in a grap
 We provide you with several support files, but you should not modify them. Turn in the following files;
 
 -trailblazer.cpp , code to perform graph path searches
+
 -map-custom.txt, a world map of your own creation.
+
 -map-custon.jpg, a world map of your own creation.
 
 
@@ -25,8 +27,11 @@ The window contains several controls. You can load world maps by selecting them 
 In your trailblazer.cpp file, you must write the following 4 functions for finding paths and creating mazes in a graph:
 
 `Path breadthFirstSearch(RoadGraph& graph, Vertex* start, Vertex* end)`
+
 `Path dijkstrasAlgorithm(RoadGraph& graph, Vertex* start, Vertex* end)`
+
 `Path aStar(RoadGraph& graph, Vertex* start, Vertex* end)`
+
 `Path alternativeRoute(RoadGraph& graph, Vertex* start, Vertex* end)`
 
 Each of the first three implements a path-searching algorithm taught in class. You should search the given graph for a path from the given start vertex to the given end vertex. If you find such a path, the path you return should be a list of all vertexes along that path, with the starting vertex first (index 0 of the vector) and the ending vertex last.
