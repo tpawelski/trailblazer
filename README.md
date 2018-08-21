@@ -47,8 +47,7 @@ Our provided main client program will allow you to test each algorithm one at a 
 
 The road network world is represented by a RoadGraph, which is a thin wrapper around the BasicGraph we saw in class. Each vertex represents a specific location on the world. An edge between two verticies means that there is a direct road between the two. The cost of the path is the time it takes to traverse that road.
 
-Your algorithm should work on any RoadGraph instance, such as this map of Middle Earth that can help Frodo get from the Shire to Mount Doom.
-
+Your algorithm should work on any RoadGraph instance.
 
 
 
