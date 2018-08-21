@@ -1,8 +1,8 @@
 
 // CS106B Trailblazer assignment 12/8/16
-// Tommy Pawelski and Josh Marchok's Trailblazer.cpp
+// Author: Tommy Pawelski
 // Note: we took our custom picture of Westeros from https://jseo.com/case-studies/game-of-thrones-westeros-hits-google-maps/
-// Citations: Lecture slides and Lair hours
+// Citations: Lecture slides and tutorial hours
 
 #include "trailblazer.h"
 #include "queue.h"
