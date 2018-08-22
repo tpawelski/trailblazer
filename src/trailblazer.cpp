@@ -1,8 +1,8 @@
 
-// CS106B Trailblazer assignment 12/8/16
-// Author: Tommy Pawelski
-// Note: picture of Westeros was taken from https://jseo.com/case-studies/game-of-thrones-westeros-hits-google-maps/
-// Citations: Lecture slides and tutorial hours
+/* CS106B Trailblazer assignment 12/8/16
+Author: Tommy Pawelski
+Note: map of Westeros was retrieved from https://jseo.com/case-studies/game-of-thrones-westeros-hits-google-maps/
+Citations: Lecture slides and tutorial hours*/
 
 #include "trailblazer.h"
 #include "queue.h"
@@ -25,8 +25,7 @@ const double SUFFICIENT_DIFFERENCE = 0.2;
 Path emptyPath;
 
 
-//This implements the BFS search algorithm and returns the first path
-//from start to end that is found
+//This implements the BFS search algorithm and returns the first path from start to end that is found
 Path breadthFirstSearch(RoadGraph& graph, Vertex* start, Vertex* end) {
     // set the start vertex's color to green
     start->setColor(GREEN);
@@ -40,9 +39,9 @@ Path breadthFirstSearch(RoadGraph& graph, Vertex* start, Vertex* end) {
     visitedSet.add(start);
     pathQueue.enqueue(startPath);
     Path currPath;
-    // While the path queue is not empty and the end node has not been visited,
-    // the current path is dequeued from the path queue, and the last vertex in
-    //the path queue is colored green as it is the current node.
+    /* While the path queue is not empty and the end node has not been visited,
+    the current path is dequeued from the path queue, and the last vertex in
+    the path queue is colored green as it is the current node.*/
     while(!pathQueue.isEmpty() && !visitedSet.contains(end)){
         currPath = pathQueue.dequeue();
         //last element in visited
@@ -76,8 +75,7 @@ Path breadthFirstSearch(RoadGraph& graph, Vertex* start, Vertex* end) {
     }
 }
 
-// This implements dijkstras algorith and returns the lowest cost path
-// from start to end using a priority queue
+// This implements dijkstras algorith and returns the lowest cost path from start to end using a priority queue
 Path dijkstrasAlgorithm(RoadGraph& graph, Vertex* start, Vertex* end) {
     //creates a to-do list priority queue
     PriorityQueue<Path> toDo;
@@ -89,25 +87,24 @@ Path dijkstrasAlgorithm(RoadGraph& graph, Vertex* start, Vertex* end) {
     Path currPath;
     //this creates a set that will contain all nodes that have been seen
     Set<Vertex*> seen;
-    //while the to-do list is not empty and the end vertex has not yet been seen,
-    //the current is dequeued from the to-do list and the last node of the current path
-    // is set to green as it is the current node.
+    /*while the to-do list is not empty and the end vertex has not yet been seen,
+    the current is dequeued from the to-do list and the last node of the current path
+    is set to green as it is the current node.*/
     while(!toDo.isEmpty() && !seen.contains(end)){
         double currPathCost = toDo.peekPriority();
         currPath = toDo.dequeue();
         Vertex* currNode = currPath.get(currPath.size()-1);
         currNode->setColor(GREEN);
-        // if the current node is the end node, it is set to red and the
-        // current path is returned
+        // if the current node is the end node, it is set to red and the current path is returned
         if(currNode==end){
             currNode->setColor(RED);
             return currPath;
         }
-        // if the current node has not yet been seen, it is added to the seen set,
-        //and its neighbors are found. for each one of its neighbors, the edge cost
-        //from the current node to its neighbor is found. the neighbor is then added to the
-        //path, and the edge cost is added to the current cost of the path. the resulting
-        // path enqueued into the todo list along with the total path cost.
+        /* if the current node has not yet been seen, it is added to the seen set,
+        and its neighbors are found. for each one of its neighbors, the edge cost
+        from the current node to its neighbor is found. the neighbor is then added to the
+        path, and the edge cost is added to the current cost of the path. the resulting
+        path enqueued into the todo list along with the total path cost.*/
         if(!seen.contains(currNode)){
             seen.add(currNode);
             Set<Vertex*> neighborSet=graph.getNeighbors(currNode);
@@ -141,9 +138,9 @@ Path aStar(RoadGraph& graph, Vertex* start, Vertex* end) {
     toDo.enqueue(startPath, 1);
     Path currPath;
     Set<Vertex*> seen;
-    //while the to-do list is not empty and the end vertex has not yet been seen,
-    //the current is dequeued from the to-do list and the last node of the current path
-    // is set to green as it is the current node.
+    /*while the to-do list is not empty and the end vertex has not yet been seen,
+    the current is dequeued from the to-do list and the last node of the current path
+    is set to green as it is the current node.*/
     while(!toDo.isEmpty() && !seen.contains(end)){
         double currPathCost = toDo.peekPriority();
         currPath = toDo.dequeue();
@@ -153,11 +150,11 @@ Path aStar(RoadGraph& graph, Vertex* start, Vertex* end) {
             currNode->setColor(RED);
             return currPath;
         }
-        // if the current node has not yet been seen, it is added to the seen set,
-        //and its neighbors are found. for each one of its neighbors, the edge cost
-        //from the current node to its neighbor is found. the neighbor is then added to the
-        //path, and the edge cost is added to the current cost of the path. the resulting
-        // path enqueued into the todo list along with the total path cost.
+        /*if the current node has not yet been seen, it is added to the seen set,
+        and its neighbors are found. for each one of its neighbors, the edge cost
+        from the current node to its neighbor is found. the neighbor is then added to the
+        path, and the edge cost is added to the current cost of the path. the resulting
+        path enqueued into the todo list along with the total path cost.*/
         if(!seen.contains(currNode)){
             seen.add(currNode);
             Set<Vertex*> neighborSet=graph.getNeighbors(currNode);
@@ -165,9 +162,9 @@ Path aStar(RoadGraph& graph, Vertex* start, Vertex* end) {
             for(Vertex* neighbor:neighborSet){
                 Edge* nextEdge = graph.getEdge(currNode, neighbor);
                 double edgeCost = nextEdge->cost;
-                //the "travel time" from the current node to the end node is calculated
-                //as the heuristic by findig the crow fly distance an dividing it
-                //by the maximum row speed, making it an underestimate
+                /*the "travel time" from the current node to the end node is calculated
+                as the heuristic by findig the crow fly distance an dividing it
+                by the maximum row speed, making it an underestimate*/
                 double oldAStarCost = graph.getCrowFlyDistance(currNode, end) / graph.getMaxRoadSpeed();
                 double nextAStarCost = graph.getCrowFlyDistance(neighbor, end) / graph.getMaxRoadSpeed();
                 Path tempPath = currPath;
@@ -255,12 +252,10 @@ Path aStarTwo(RoadGraph& graph, Vertex* start, Vertex* end, Edge* removedEdge) {
             }
         }
     }
-//    Path emptyPath;
     return emptyPath;
 }
 
-//this helper function finds the number of nodes in the alternate path that
-//are not in the best path
+//this helper function finds the number of nodes in the alternate path that are not in the best path
 double findDifference(Path currPath, Path bestPath){
     Set<Vertex*> bestSet;
     Set<Vertex*> currentSet;
